@@ -42,7 +42,7 @@ export const site = {
   country: "India",
   languages: ["English", "Tamil", "Malayalam"],
   resume: "/resume.pdf",
-  heroImage: "/hero-paseem.png",
+  heroImage: "/hero-paseem-hd.png",
   ogImage: "/og-image.jpg",
   heroWords: ["DIGITAL", "MARKETING"] as const,
   nav: [

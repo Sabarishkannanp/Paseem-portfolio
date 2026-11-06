@@ -72,7 +72,7 @@ export default function BuildCursors({ heroId = "hero", pageCount = 6 }: { heroI
     <button
       type="button"
       onClick={replay}
-      className="fixed bottom-5 right-5 z-[9993] rounded-md border border-[#1C2230] bg-[#0E121B]/85 px-3 py-1.5 font-mono text-[11px] font-medium text-[#8B93A6] backdrop-blur transition-colors hover:border-[#C6FF3D] hover:text-[#C6FF3D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#C6FF3D]"
+      className="fixed bottom-5 right-5 z-[9993] rounded-md border border-[#26262A] bg-[#121214]/85 px-3 py-1.5 font-mono text-[11px] font-medium text-[#A1A1AA] backdrop-blur transition-colors hover:border-[#F0232E] hover:text-[#F0232E] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#F0232E]"
     >
       ↻ Replay
     </button>

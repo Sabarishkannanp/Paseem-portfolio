@@ -2,14 +2,14 @@
 @import "lenis/dist/lenis.css";
 
 @theme inline {
-  --color-bg: #07090F;
-  --color-surface: #0E121B;
-  --color-line: #1C2230;
-  --color-accent: #C6FF3D;
-  --color-accent-deep: #4D7CFF;
-  --color-accent-warm: #2EE6C5;
+  --color-bg: #0A0A0A;
+  --color-surface: #121214;
+  --color-line: #26262A;
+  --color-accent: #F0232E;
+  --color-accent-deep: #8A0B12;
+  --color-accent-warm: #FF5A36;
   --color-ink: #eef1f6;
-  --color-muted: #8B93A6;
+  --color-muted: #A1A1AA;
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
@@ -18,18 +18,18 @@
 }
 
 :root {
-  --bg: #07090F;
-  --accent: #C6FF3D;
-  --glow-accent: 0 0 60px rgba(198,255,61, 0.25);
+  --bg: #0A0A0A;
+  --accent: #F0232E;
+  --glow-accent: 0 0 60px rgba(240,35,46, 0.25);
 
-  --grad-hero: linear-gradient(180deg, #F1FFB8 0%, #C6FF3D 45%, #6FCF0A 100%);
-  --grad-btn: linear-gradient(135deg, #D9FF5C, #9BE01E);
-  --grad-btn-hover: linear-gradient(135deg, #E8FF8A, #B4F02A);
-  --grad-glow: radial-gradient(circle, rgba(198,255,61, 0.45) 0%, rgba(77,124,255, 0.15) 38%, transparent 68%);
-  --grad-line: linear-gradient(90deg, #C6FF3D, #2EE6C5);
-  --grad-row: linear-gradient(90deg, rgba(198,255,61, 0.45) 0%, rgba(198,255,61, 0.08) 55%, #07090F 100%);
-  --grad-row-dark: linear-gradient(90deg, #7fae14 0%, #3b5409 32%, #141d07 65%, #07090f 100%);
-  --grad-band: linear-gradient(90deg, #C6FF3D 0%, #7BEA2E 50%, #2EE6C5 100%);
+  --grad-hero: linear-gradient(180deg, #FFD6D6 0%, #F0232E 45%, #A30A12 100%);
+  --grad-btn: linear-gradient(135deg, #FF4B4B, #C8101B);
+  --grad-btn-hover: linear-gradient(135deg, #FF7070, #E01822);
+  --grad-glow: radial-gradient(circle, rgba(240,35,46, 0.45) 0%, rgba(140,12,22, 0.15) 38%, transparent 68%);
+  --grad-line: linear-gradient(90deg, #F0232E, #FF5A36);
+  --grad-row: linear-gradient(90deg, rgba(240,35,46, 0.45) 0%, rgba(240,35,46, 0.08) 55%, #0A0A0A 100%);
+  --grad-row-dark: linear-gradient(90deg, #E50914 0%, #5C0309 45%, #0A0A0A 100%);
+  --grad-band: linear-gradient(90deg, #F0232E 0%, #C8101B 50%, #FF5A36 100%);
 }
 
 html {
@@ -46,12 +46,12 @@ body {
 }
 
 ::selection {
-  background: #C6FF3D;
-  color: #07090F;
+  background: #F0232E;
+  color: #ffffff;
 }
 
 :focus-visible {
-  outline: 2px solid #C6FF3D;
+  outline: 2px solid #F0232E;
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -80,13 +80,13 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 28px rgba(198,255,61, 0.35));
+  filter: drop-shadow(0 0 28px rgba(240,35,46, 0.35));
 }
 
 @utility text-outline-accent {
   color: transparent;
-  -webkit-text-stroke: 2px #C6FF3D;
-  filter: drop-shadow(0 0 14px rgba(198,255,61, 0.45));
+  -webkit-text-stroke: 2px #F0232E;
+  filter: drop-shadow(0 0 14px rgba(240,35,46, 0.45));
 }
 
 @utility text-outline {
@@ -103,8 +103,8 @@ body {
 
 @utility btn-accent {
   background: var(--grad-btn);
-  color: #07090F;
-  box-shadow: 0 0 0 rgba(198,255,61, 0);
+  color: #ffffff;
+  box-shadow: 0 0 0 rgba(240,35,46, 0);
   transition:
     box-shadow 0.3s,
     transform 0.3s;
@@ -118,10 +118,10 @@ body {
   background: var(--grad-line);
 }
 
-/* 1px gradient border on hover (lime → blue) */
+/* 1px gradient border on hover (red → deep red) */
 @utility card-grad {
   position: relative;
-  border: 1px solid #1C2230;
+  border: 1px solid #26262A;
   transition: border-color 0.3s;
   &::before {
     content: "";
@@ -129,7 +129,7 @@ body {
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, #C6FF3D, #4D7CFF);
+    background: linear-gradient(135deg, #F0232E, #8A0B12);
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,
       linear-gradient(#000 0 0);
@@ -156,7 +156,7 @@ body {
 }
 /* rim glow lives on a wrapper so the mask above can't clip it into a box */
 @utility hero-rim {
-  filter: drop-shadow(-10px 0 28px rgba(198,255,61, 0.22)) drop-shadow(12px 0 30px rgba(77,124,255, 0.22));
+  filter: drop-shadow(-10px 0 28px rgba(240,35,46, 0.22)) drop-shadow(12px 0 30px rgba(140,12,22, 0.22));
 }
 
 /* ---------- keyframes ---------- */

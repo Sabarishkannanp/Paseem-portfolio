@@ -20,11 +20,11 @@ type Tool = "move" | "frame" | "shape" | "text" | "image";
 
 /** Edit names, colours and chat lines here. */
 export const PEOPLE: Person[] = [
-  { name: "Paseem", color: "#C6FF3D", ink: "#07090F", says: ["let's rank this 🚀", "looks clean ✨"] },
+  { name: "Paseem", color: "#F0232E", ink: "#FFFFFF", says: ["let's rank this 🚀", "looks clean ✨"] },
   { name: "SEO", color: "#4D7CFF", ink: "#FFFFFF", says: ["keywords ✓", "schema added"] },
-  { name: "Ads", color: "#FF6B3D", ink: "#07090F", says: ["CTR ↑", "campaign live"] },
+  { name: "Ads", color: "#FACC15", ink: "#0A0A0A", says: ["CTR ↑", "campaign live"] },
   { name: "Meta", color: "#B26BFF", ink: "#FFFFFF", says: ["leads incoming 💬", "audience set"] },
-  { name: "Analytics", color: "#2EE6C5", ink: "#07090F", says: ["traffic ↑ 📈", "GA4 tracking ✓"] },
+  { name: "Analytics", color: "#2EE6C5", ink: "#0A0A0A", says: ["traffic ↑ 📈", "GA4 tracking ✓"] },
 ];
 const FINALE_LINE = "shipped! 🎉";
 
@@ -53,25 +53,25 @@ const CSS = `
 .bc-trail{position:absolute;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;animation:bc-fade .5s ease-out forwards}
 .bc-ripple{position:absolute;width:14px;height:14px;margin:-7px 0 0 -7px;border-radius:50%;border:2px solid var(--c);animation:bc-ripple .55s ease-out forwards}
 .bc-spark{position:absolute;width:7px;height:7px;margin:-3.5px 0 0 -3.5px;border-radius:2px;animation:bc-spark .8s cubic-bezier(.2,.7,.3,1) forwards}
-.bc-ring{position:absolute;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;border:2px solid #C6FF3D;animation:bc-ring .7s ease-out forwards}
+.bc-ring{position:absolute;width:20px;height:20px;margin:-10px 0 0 -10px;border-radius:50%;border:2px solid #F0232E;animation:bc-ring .7s ease-out forwards}
 .bc-caret{position:absolute;width:2px;border-radius:1px;animation:bc-blink .5s steps(1) infinite}
-.bc-box{position:absolute;box-sizing:border-box;border:1px solid #C6FF3D;background:rgba(198,255,61,.05);box-shadow:0 0 24px rgba(198,255,61,.12);transition:width var(--d,300ms) cubic-bezier(.4,0,.2,1),height var(--d,300ms) cubic-bezier(.4,0,.2,1),opacity .25s}
-.bc-h{position:absolute;width:6px;height:6px;box-sizing:border-box;background:#fff;border:1px solid #C6FF3D}
+.bc-box{position:absolute;box-sizing:border-box;border:1px solid #F0232E;background:rgba(240,35,46,.05);box-shadow:0 0 24px rgba(240,35,46,.12);transition:width var(--d,300ms) cubic-bezier(.4,0,.2,1),height var(--d,300ms) cubic-bezier(.4,0,.2,1),opacity .25s}
+.bc-h{position:absolute;width:6px;height:6px;box-sizing:border-box;background:#fff;border:1px solid #F0232E}
 .bc-h.tl{left:-3px;top:-3px}.bc-h.tr{right:-3px;top:-3px}.bc-h.bl{left:-3px;bottom:-3px}.bc-h.br{right:-3px;bottom:-3px}
-.bc-size{position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 6px);background:#C6FF3D;color:#07090F;font:600 10px/1 ${MONO};padding:3px 5px;border-radius:3px;white-space:nowrap}
-.bc-bar{position:fixed;left:50%;bottom:20px;transform:translate(-50%,0);z-index:9992;display:flex;align-items:center;gap:2px;padding:4px;border-radius:12px;background:rgba(14,18,27,.92);border:1px solid #1C2230;backdrop-filter:blur(8px);box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 40px rgba(198,255,61,.08);transition:opacity .4s,transform .5s cubic-bezier(.34,1.56,.64,1);pointer-events:none}
+.bc-size{position:absolute;left:50%;transform:translateX(-50%);top:calc(100% + 6px);background:#F0232E;color:#FFFFFF;font:600 10px/1 ${MONO};padding:3px 5px;border-radius:3px;white-space:nowrap}
+.bc-bar{position:fixed;left:50%;bottom:20px;transform:translate(-50%,0);z-index:9992;display:flex;align-items:center;gap:2px;padding:4px;border-radius:12px;background:rgba(14,18,27,.92);border:1px solid #26262A;backdrop-filter:blur(8px);box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 40px rgba(240,35,46,.08);transition:opacity .4s,transform .5s cubic-bezier(.34,1.56,.64,1);pointer-events:none}
 .bc-bar.bc-off{opacity:0;transform:translate(-50%,24px)}
-.bc-tool{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;color:#8B93A6;transition:background .15s,color .15s,transform .2s}
-.bc-tool.on{background:#C6FF3D;color:#07090F;transform:translateY(-2px)}
-.bc-avs{display:flex;align-items:center;padding:0 6px 0 16px;margin-left:4px;border-left:1px solid #1C2230;height:24px}
-.bc-av{width:22px;height:22px;margin-left:-6px;border-radius:50%;border:2px solid #0E121B;display:grid;place-items:center;font:700 10px/1 ${MONO};transition:transform .2s,box-shadow .2s}
+.bc-tool{width:32px;height:32px;border-radius:8px;display:grid;place-items:center;color:#A1A1AA;transition:background .15s,color .15s,transform .2s}
+.bc-tool.on{background:#F0232E;color:#FFFFFF;transform:translateY(-2px)}
+.bc-avs{display:flex;align-items:center;padding:0 6px 0 16px;margin-left:4px;border-left:1px solid #26262A;height:24px}
+.bc-av{width:22px;height:22px;margin-left:-6px;border-radius:50%;border:2px solid #121214;display:grid;place-items:center;font:700 10px/1 ${MONO};transition:transform .2s,box-shadow .2s}
 .bc-av.on{transform:translateY(-3px) scale(1.12);box-shadow:0 0 0 2px var(--c)}
-.bc-file{padding:0 10px 0 8px;color:#8B93A6;font:500 11px/32px ${MONO};white-space:nowrap;display:flex;align-items:center;gap:6px}
+.bc-file{padding:0 10px 0 8px;color:#A1A1AA;font:500 11px/32px ${MONO};white-space:nowrap;display:flex;align-items:center;gap:6px}
 .bc-file b{color:#EEF1F6;font-weight:600}
-.bc-live{width:6px;height:6px;border-radius:50%;background:#C6FF3D;box-shadow:0 0 8px #C6FF3D;animation:bc-blink 1s steps(1) infinite}
-.bc-ruler{position:fixed;z-index:9991;pointer-events:none;background-color:rgba(7,9,15,.88);transition:opacity .5s}
-.bc-ruler-x{left:0;right:0;top:0;height:14px;border-bottom:1px solid #1C2230;background-image:repeating-linear-gradient(90deg,rgba(198,255,61,.35) 0 1px,transparent 1px 10px),repeating-linear-gradient(90deg,rgba(198,255,61,.8) 0 1px,transparent 1px 100px);background-size:100% 5px,100% 10px;background-position:bottom;background-repeat:repeat-x}
-.bc-ruler-y{top:0;bottom:0;left:0;width:14px;border-right:1px solid #1C2230;background-image:repeating-linear-gradient(0deg,rgba(198,255,61,.35) 0 1px,transparent 1px 10px),repeating-linear-gradient(0deg,rgba(198,255,61,.8) 0 1px,transparent 1px 100px);background-size:5px 100%,10px 100%;background-position:right;background-repeat:repeat-y}
+.bc-live{width:6px;height:6px;border-radius:50%;background:#F0232E;box-shadow:0 0 8px #F0232E;animation:bc-blink 1s steps(1) infinite}
+.bc-ruler{position:fixed;z-index:9991;pointer-events:none;background-color:rgba(10,10,10,.88);transition:opacity .5s}
+.bc-ruler-x{left:0;right:0;top:0;height:14px;border-bottom:1px solid #26262A;background-image:repeating-linear-gradient(90deg,rgba(240,35,46,.35) 0 1px,transparent 1px 10px),repeating-linear-gradient(90deg,rgba(240,35,46,.8) 0 1px,transparent 1px 100px);background-size:100% 5px,100% 10px;background-position:bottom;background-repeat:repeat-x}
+.bc-ruler-y{top:0;bottom:0;left:0;width:14px;border-right:1px solid #26262A;background-image:repeating-linear-gradient(0deg,rgba(240,35,46,.35) 0 1px,transparent 1px 10px),repeating-linear-gradient(0deg,rgba(240,35,46,.8) 0 1px,transparent 1px 100px);background-size:5px 100%,10px 100%;background-position:right;background-repeat:repeat-y}
 @media (max-width:640px){
 .bc-avs,.bc-file{display:none}
 .bc-bar{bottom:14px}
@@ -165,7 +165,7 @@ function pageRect(n: HTMLElement) {
   return { x: r.left + window.scrollX, y: r.top + window.scrollY, w: r.width, h: r.height };
 }
 
-function revealEl(n: HTMLElement, tool: Tool, ms: number, layer?: HTMLElement, color = "#C6FF3D") {
+function revealEl(n: HTMLElement, tool: Tool, ms: number, layer?: HTMLElement, color = "#F0232E") {
   const r = n.getBoundingClientRect();
   if (r.width === 0 || r.height === 0 || tool === "move") {
     show(n);
@@ -221,7 +221,7 @@ class Cursor {
     this.ptr = el(
       "div",
       "bc-ptr",
-      `<svg width="18" height="20" viewBox="0 0 18 20"><path d="M1 1l15 7.2-6.6 1.8L6.2 18z" fill="${p.color}" stroke="#07090F" stroke-width="1.2" stroke-linejoin="round"/></svg>`,
+      `<svg width="18" height="20" viewBox="0 0 18 20"><path d="M1 1l15 7.2-6.6 1.8L6.2 18z" fill="${p.color}" stroke="#0A0A0A" stroke-width="1.2" stroke-linejoin="round"/></svg>`,
     );
     const tag = el("span", "bc-tag", p.name);
     tag.style.background = p.color;

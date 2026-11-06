@@ -31,7 +31,7 @@ export default function Journey() {
       id="journey"
       data-build-section
       aria-labelledby="journey-title"
-      className="relative border-t border-line bg-[linear-gradient(180deg,#07090F,#0A0D15_50%,#07090F)]"
+      className="relative border-t border-line bg-[linear-gradient(180deg,#0A0A0A,#0E0E10_50%,#0A0A0A)]"
     >
       <div className="mx-auto grid max-w-[1440px] gap-12 px-5 py-24 md:px-8 md:py-32 lg:grid-cols-[1fr_1.1fr] lg:gap-20">
         <div className="lg:sticky lg:top-28 lg:h-fit">
@@ -59,7 +59,7 @@ export default function Journey() {
         <ol ref={listRef} className="relative ml-2 border-l border-line pl-8 md:pl-12">
           <motion.span
             aria-hidden
-            className="absolute -left-px top-0 h-full w-[2px] origin-top bg-[linear-gradient(180deg,#C6FF3D,#2EE6C5)] shadow-[0_0_12px_rgba(198,255,61,.6)]"
+            className="absolute -left-px top-0 h-full w-[2px] origin-top bg-[linear-gradient(180deg,#F0232E,#FF5A36)] shadow-[0_0_12px_rgba(240,35,46,.6)]"
             style={{ scaleY: fill }}
           />
           {journey.map((j, i) => (
@@ -67,7 +67,7 @@ export default function Journey() {
               <span
                 aria-hidden
                 className={`absolute -left-[calc(2rem+7px)] top-1.5 h-3.5 w-3.5 rounded-full border-2 transition-colors duration-300 md:-left-[calc(3rem+7px)] ${
-                  i <= active ? "border-accent bg-accent shadow-[0_0_14px_#C6FF3D]" : "border-line bg-bg"
+                  i <= active ? "border-accent bg-accent shadow-[0_0_14px_#F0232E]" : "border-line bg-bg"
                 }`}
               />
               <p className="font-mono text-xs tracking-[0.2em] text-accent">{j.year}</p>

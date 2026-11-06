@@ -30,7 +30,7 @@ export default function Contact() {
             <button
               type="button"
               onClick={() => openContact()}
-              className="btn-accent group relative grid h-40 w-40 place-items-center rounded-full text-lg font-semibold shadow-[0_0_80px_rgba(198,255,61,.35)] md:h-48 md:w-48 md:text-xl"
+              className="btn-accent group relative grid h-40 w-40 place-items-center rounded-full text-lg font-semibold shadow-[0_0_80px_rgba(240,35,46,.35)] md:h-48 md:w-48 md:text-xl"
             >
               <span aria-hidden className="absolute inset-0 animate-ping rounded-full bg-accent/20 [animation-duration:2.6s]" />
               <span className="relative flex flex-col items-center gap-1">

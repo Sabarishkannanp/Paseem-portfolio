@@ -9,7 +9,7 @@ export default function Footer() {
       <div
         data-build="1"
         data-build-tool="frame"
-        className="overflow-hidden py-5 text-bg md:py-7"
+        className="overflow-hidden py-5 text-white md:py-7"
         style={{ background: "var(--grad-band)" }}
         aria-label="Services"
       >

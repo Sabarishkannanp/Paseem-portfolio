@@ -63,7 +63,7 @@ export default function ContactProvider({ children }: { children: ReactNode }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="fixed bottom-6 left-1/2 z-[9999] -translate-x-1/2 rounded-full border border-accent/40 bg-surface px-5 py-2.5 font-mono text-xs text-accent shadow-[0_0_40px_rgba(198,255,61,.2)]"
+            className="fixed bottom-6 left-1/2 z-[9999] -translate-x-1/2 rounded-full border border-accent/40 bg-surface px-5 py-2.5 font-mono text-xs text-accent shadow-[0_0_40px_rgba(240,35,46,.2)]"
           >
             {toast}
           </motion.div>
@@ -275,7 +275,7 @@ function FormView({ onBack, onSent, notify }: { onBack: () => void; onSent: () =
                   aria-pressed={on}
                   onClick={() => toggle(t)}
                   className={`rounded-full border px-4 py-2 text-xs font-medium transition-colors ${
-                    on ? "border-accent bg-accent text-bg" : "border-line text-ink hover:border-accent hover:text-accent"
+                    on ? "border-accent bg-accent text-white" : "border-line text-ink hover:border-accent hover:text-accent"
                   }`}
                 >
                   {t}

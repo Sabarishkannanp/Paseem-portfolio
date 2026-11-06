@@ -19,19 +19,19 @@ export default function GlassChart({
     >
       <div className="flex items-center justify-between gap-2">
         <span className="font-mono text-[9px] leading-none text-ink/85 md:text-[10px]">{label}</span>
-        <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_8px_#C6FF3D]" />
+        <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_8px_#F0232E]" />
       </div>
       <div className="mt-1.5 h-[3px] w-1/2 rounded-full bg-white/20" />
       <div className="mt-1 h-[3px] w-1/3 rounded-full bg-white/10" />
       <svg viewBox="0 0 120 54" className="mt-2 h-auto w-full" fill="none">
         <defs>
           <linearGradient id={`${id}-a`} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#C6FF3D" stopOpacity=".45" />
-            <stop offset="1" stopColor="#C6FF3D" stopOpacity="0" />
+            <stop offset="0" stopColor="#F0232E" stopOpacity=".45" />
+            <stop offset="1" stopColor="#F0232E" stopOpacity="0" />
           </linearGradient>
           <linearGradient id={`${id}-b`} x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0" stopColor="#E8FF8A" />
-            <stop offset="1" stopColor="#6FCF0A" stopOpacity=".55" />
+            <stop offset="0" stopColor="#FF7070" />
+            <stop offset="1" stopColor="#A30A12" stopOpacity=".55" />
           </linearGradient>
         </defs>
         {variant !== "line" &&
@@ -43,13 +43,13 @@ export default function GlassChart({
             {variant === "line" && <path d="M2 46 L18 40 L32 42 L48 30 L62 33 L78 20 L92 23 L108 8 L118 4 L118 54 L2 54Z" fill={`url(#${id}-a)`} />}
             <path
               d="M2 46 L18 40 L32 42 L48 30 L62 33 L78 20 L92 23 L108 8 L118 4"
-              stroke="#C6FF3D"
+              stroke="#F0232E"
               strokeWidth="2"
               strokeLinecap="round"
               strokeLinejoin="round"
-              style={{ filter: "drop-shadow(0 0 4px rgba(198,255,61,.8))" }}
+              style={{ filter: "drop-shadow(0 0 4px rgba(240,35,46,.8))" }}
             />
-            <path d="M110 3 L118 4 L115 11" stroke="#C6FF3D" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path d="M110 3 L118 4 L115 11" stroke="#F0232E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </>
         )}
       </svg>

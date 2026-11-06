@@ -16,7 +16,7 @@ export default function Hero() {
       aria-label="Introduction"
       className="bg-grid relative isolate flex min-h-[100svh] flex-col overflow-hidden pt-20 lg:block lg:pt-0"
     >
-      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_35%,transparent_25%,#07090F_78%)]" />
+      <div aria-hidden className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_50%_35%,transparent_25%,#0A0A0A_78%)]" />
 
       {/* giant background words */}
       <div
@@ -36,14 +36,14 @@ export default function Hero() {
       {/* dark wash so the name reads over the glowing word (sits above words, below photo) */}
       <div
         aria-hidden
-        className="pointer-events-none absolute bottom-0 left-0 z-[5] hidden h-[62%] w-[60%] bg-[radial-gradient(ellipse_at_0%_100%,rgba(7,9,15,.95)_25%,rgba(7,9,15,.6)_50%,transparent_75%)] lg:block"
+        className="pointer-events-none absolute bottom-0 left-0 z-[5] hidden h-[62%] w-[60%] bg-[radial-gradient(ellipse_at_0%_100%,rgba(10,10,10,.95)_25%,rgba(10,10,10,.6)_50%,transparent_75%)] lg:block"
       />
 
       {/* cutout in front of the words */}
       <div
         data-build="4"
         data-build-tool="image"
-        className="relative z-10 mx-auto -mt-[30vw] aspect-[436/848] w-[min(58vw,290px)] lg:absolute lg:bottom-0 lg:left-1/2 lg:mt-0 lg:w-[min(26vw,420px,44vh)] lg:-translate-x-1/2"
+        className="relative z-10 mx-auto -mt-[30vw] aspect-[683/1437] w-[min(58vw,290px)] lg:absolute lg:bottom-0 lg:left-1/2 lg:mt-0 lg:w-[min(26vw,420px,44vh)] lg:-translate-x-1/2"
       >
         <div aria-hidden className="absolute inset-x-[-30%] top-[0%] -z-10 aspect-square rounded-full blur-2xl" style={{ background: "var(--grad-glow)" }} />
         <div className="hero-rim absolute inset-0">

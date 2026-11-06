@@ -10,8 +10,8 @@ import { skills } from "@/data/skills";
 
 /**
  * Big outlined rows (reference-portfolio style): hover or tap fills the row with a
- * lime → dark gradient, the word turns solid, tools with original logos slide open,
- * and a lime circle follows the pointer.
+ * red → dark gradient, the word turns solid, tools with original logos slide open,
+ * and a red circle follows the pointer.
  */
 export default function Skills() {
   const [open, setOpen] = useState<number | null>(null);
@@ -59,7 +59,7 @@ export default function Skills() {
               onPointerEnter={(e) => e.pointerType === "mouse" && setOpen(i)}
               className="group relative overflow-hidden border-b border-line"
             >
-              {/* lime → olive → dark gradient fill */}
+              {/* red → deep red → black gradient fill */}
               <span
                 aria-hidden
                 className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-data-[open]:opacity-100"
@@ -101,7 +101,7 @@ export default function Skills() {
                             {brandFor(t) ? (
                               <BrandLogo name={t} size={16} />
                             ) : (
-                              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_6px_#C6FF3D]" />
+                              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_6px_#F0232E]" />
                             )}
                             {t}
                           </li>
@@ -116,12 +116,12 @@ export default function Skills() {
           );
         })}
 
-        {/* lime circle that follows the pointer over the rows (desktop) */}
+        {/* red circle that follows the pointer over the rows (desktop) */}
         <AnimatePresence>
           {hovering && open !== null && (
             <motion.span
               aria-hidden
-              className="pointer-events-none absolute left-0 top-0 z-10 -ml-10 -mt-10 hidden h-20 w-20 place-items-center rounded-full bg-accent/90 shadow-[0_0_40px_rgba(198,255,61,.45)] md:grid"
+              className="pointer-events-none absolute left-0 top-0 z-10 -ml-10 -mt-10 hidden h-20 w-20 place-items-center rounded-full bg-accent/90 shadow-[0_0_40px_rgba(240,35,46,.45)] md:grid"
               style={{ x, y }}
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}

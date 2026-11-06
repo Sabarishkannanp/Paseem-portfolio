@@ -71,7 +71,7 @@ export default function Results() {
           {industries.map((ind, i) => (
             <li
               key={ind}
-              className="group flex items-center justify-between border-b border-line py-4 transition-colors hover:bg-[linear-gradient(90deg,rgba(198,255,61,.08),transparent)] md:py-5"
+              className="group flex items-center justify-between border-b border-line py-4 transition-colors hover:bg-[linear-gradient(90deg,rgba(240,35,46,.08),transparent)] md:py-5"
             >
               <span className="flex items-baseline gap-5">
                 <span className="font-mono text-xs text-muted">{String(i + 1).padStart(2, "0")}</span>

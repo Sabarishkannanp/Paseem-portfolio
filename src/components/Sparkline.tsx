@@ -15,7 +15,7 @@ export default function Sparkline({ variant = 0, className = "" }: { variant?: n
     <svg viewBox="0 0 72 22" className={`h-5 w-[72px] ${className}`} aria-hidden fill="none">
       <motion.path
         d={d}
-        stroke="#C6FF3D"
+        stroke="#F0232E"
         strokeWidth="1.6"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -23,9 +23,9 @@ export default function Sparkline({ variant = 0, className = "" }: { variant?: n
         whileInView={{ pathLength: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 1.4, ease: "easeOut", delay: 0.2 }}
-        style={{ filter: "drop-shadow(0 0 4px rgba(198,255,61,.6))" }}
+        style={{ filter: "drop-shadow(0 0 4px rgba(240,35,46,.6))" }}
       />
-      <circle cx="70" cy={d.trim().split(" ").pop()} r="2" fill="#C6FF3D" />
+      <circle cx="70" cy={d.trim().split(" ").pop()} r="2" fill="#F0232E" />
     </svg>
   );
 }

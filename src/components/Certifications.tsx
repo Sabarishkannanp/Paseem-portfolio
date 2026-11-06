@@ -13,7 +13,7 @@ export default function Certifications() {
       id="certifications"
       data-build-section
       aria-labelledby="certs-title"
-      className="border-t border-line bg-[linear-gradient(180deg,#07090F,#0A0D15)]"
+      className="border-t border-line bg-[linear-gradient(180deg,#0A0A0A,#0E0E10)]"
     >
       <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-8 md:py-32">
         <SectionHeading id="certs-title" eyebrow="Certifications & training" lines={["Certified"]} />

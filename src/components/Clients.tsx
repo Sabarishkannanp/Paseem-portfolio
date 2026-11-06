@@ -36,7 +36,7 @@ export default function Clients() {
                 {row.map((c) => (
                   <li
                     key={`${c.slug}-${copy}`}
-                    className="flex h-20 min-w-[200px] items-center justify-center rounded-2xl bg-[#F4F6F9] px-7 shadow-[inset_0_0_0_1px_rgba(255,255,255,.6)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_0_2px_#C6FF3D,0_12px_30px_rgba(198,255,61,.18)] md:h-24 md:min-w-[240px]"
+                    className="flex h-20 min-w-[200px] items-center justify-center rounded-2xl bg-[#F4F6F9] px-7 shadow-[inset_0_0_0_1px_rgba(255,255,255,.6)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_0_0_2px_#F0232E,0_12px_30px_rgba(240,35,46,.18)] md:h-24 md:min-w-[240px]"
                   >
                     {c.logo ? (
                       <Image

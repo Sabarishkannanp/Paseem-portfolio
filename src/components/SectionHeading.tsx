@@ -1,6 +1,6 @@
 import type { ReactNode } from "react";
 
-/** Eyebrow label + huge uppercase heading ending in a lime full stop. */
+/** Eyebrow label + huge uppercase heading ending in a red full stop. */
 export default function SectionHeading({
   id,
   eyebrow,

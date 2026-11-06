@@ -10,7 +10,7 @@ export default function Proof() {
     return { ...p, file, video: !!file && /\.(mp4|webm)$/.test(file) };
   });
   return (
-    <section id="proof" data-build-section aria-labelledby="proof-title" className="border-t border-line bg-[linear-gradient(180deg,#07090F,#0A0D15)]">
+    <section id="proof" data-build-section aria-labelledby="proof-title" className="border-t border-line bg-[linear-gradient(180deg,#0A0A0A,#0E0E10)]">
       <div className="mx-auto max-w-[1440px] px-5 py-24 md:px-8 md:py-32">
         <SectionHeading id="proof-title" eyebrow="Screenshots from live accounts" lines={["Proof in", "performance"]} />
         <ProofGrid items={items} />

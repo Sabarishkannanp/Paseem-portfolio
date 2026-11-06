@@ -54,7 +54,7 @@ export default function ProofGrid({ items }: { items: Item[] }) {
                   {p.channel}
                 </span>
                 {p.file && (
-                  <span className="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-accent text-bg opacity-0 transition-opacity group-hover:opacity-100">
+                  <span className="absolute bottom-4 right-4 grid h-10 w-10 place-items-center rounded-full bg-accent text-white opacity-0 transition-opacity group-hover:opacity-100">
                     {p.video ? <Play size={16} /> : <Expand size={16} />}
                   </span>
                 )}
