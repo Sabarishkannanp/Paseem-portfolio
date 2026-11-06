@@ -83,7 +83,7 @@ export default function Modal({
               type="button"
               onClick={onClose}
               aria-label="Close"
-              className="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full border border-line text-muted transition-colors hover:border-lime hover:text-lime"
+              className="absolute right-4 top-4 z-10 grid h-9 w-9 place-items-center rounded-full border border-line text-muted transition-colors hover:border-accent hover:text-accent"
             >
               <X size={16} />
             </button>

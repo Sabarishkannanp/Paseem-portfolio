@@ -19,7 +19,7 @@ export default function GlassChart({
     >
       <div className="flex items-center justify-between gap-2">
         <span className="font-mono text-[9px] leading-none text-ink/85 md:text-[10px]">{label}</span>
-        <span className="h-1.5 w-1.5 rounded-full bg-lime shadow-[0_0_8px_#C6FF3D]" />
+        <span className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_8px_#C6FF3D]" />
       </div>
       <div className="mt-1.5 h-[3px] w-1/2 rounded-full bg-white/20" />
       <div className="mt-1 h-[3px] w-1/3 rounded-full bg-white/10" />

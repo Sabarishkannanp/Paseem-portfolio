@@ -67,10 +67,10 @@ export default function Journey() {
               <span
                 aria-hidden
                 className={`absolute -left-[calc(2rem+7px)] top-1.5 h-3.5 w-3.5 rounded-full border-2 transition-colors duration-300 md:-left-[calc(3rem+7px)] ${
-                  i <= active ? "border-lime bg-lime shadow-[0_0_14px_#C6FF3D]" : "border-line bg-bg"
+                  i <= active ? "border-accent bg-accent shadow-[0_0_14px_#C6FF3D]" : "border-line bg-bg"
                 }`}
               />
-              <p className="font-mono text-xs tracking-[0.2em] text-lime">{j.year}</p>
+              <p className="font-mono text-xs tracking-[0.2em] text-accent">{j.year}</p>
               <h3 className="mt-2 font-display text-2xl leading-tight text-ink md:text-3xl">{j.role}</h3>
               <p className="mt-1 text-sm text-muted">
                 {j.org}
@@ -79,7 +79,7 @@ export default function Journey() {
               <ul className="mt-5 space-y-2.5">
                 {j.points.map((p) => (
                   <li key={p} className="flex gap-3 text-[15px] leading-relaxed text-ink/80">
-                    <span aria-hidden className="mt-2.5 h-1 w-3 shrink-0 rounded-full bg-lime/70" />
+                    <span aria-hidden className="mt-2.5 h-1 w-3 shrink-0 rounded-full bg-accent/70" />
                     {p}
                   </li>
                 ))}

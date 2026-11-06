@@ -63,7 +63,7 @@ export default function ContactProvider({ children }: { children: ReactNode }) {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 20 }}
-            className="fixed bottom-6 left-1/2 z-[9999] -translate-x-1/2 rounded-full border border-lime/40 bg-surface px-5 py-2.5 font-mono text-xs text-lime shadow-[0_0_40px_rgba(198,255,61,.2)]"
+            className="fixed bottom-6 left-1/2 z-[9999] -translate-x-1/2 rounded-full border border-accent/40 bg-surface px-5 py-2.5 font-mono text-xs text-accent shadow-[0_0_40px_rgba(198,255,61,.2)]"
           >
             {toast}
           </motion.div>
@@ -113,13 +113,13 @@ function IstClock() {
 }
 
 const pill =
-  "inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-1.5 text-xs font-medium text-ink transition-colors hover:border-lime hover:text-lime";
+  "inline-flex items-center gap-1.5 rounded-full border border-line px-3 py-1.5 text-xs font-medium text-ink transition-colors hover:border-accent hover:text-accent";
 
 function Row({ icon, label, value, children }: { icon: ReactNode; label: string; value: ReactNode; children?: ReactNode }) {
   return (
     <div className="flex flex-col gap-3 border-b border-line py-4 sm:flex-row sm:items-center sm:justify-between">
       <div className="flex min-w-0 items-center gap-3">
-        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line bg-bg/70 text-lime">{icon}</span>
+        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl border border-line bg-bg/70 text-accent">{icon}</span>
         <div className="min-w-0">
           <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-muted">{label}</p>
           <p className="truncate text-sm text-ink">{value}</p>
@@ -149,11 +149,11 @@ function TalkView({ onForm, notify }: { onForm: () => void; notify: (m: string) 
 
   return (
     <div className="p-6 sm:p-8">
-      <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-lime">
+      <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-accent">
         <span className="animate-pulse-dot">●</span> Available for projects
       </p>
       <h2 className="mt-2 font-display text-4xl sm:text-5xl">
-        Let&apos;s talk<span className="text-lime">.</span>
+        Let&apos;s talk<span className="text-accent">.</span>
       </h2>
       <p className="mt-2 text-sm text-muted">SEO, ads, analytics — or just a hello. Pick whatever is easiest.</p>
 
@@ -173,11 +173,11 @@ function TalkView({ onForm, notify }: { onForm: () => void; notify: (m: string) 
           </a>
           <CopyBtn done={copied === "phone"} onCopy={() => copy(site.phone, "phone")} />
         </Row>
-        <Row icon={<Download size={16} />} label="Resume" value="Mohammed Paseem J — CV (PDF)">
+        <Row icon={<Download size={16} />} label="Resume" value="Mohammed Paseem — CV (PDF)">
           <a className={pill} href={site.resume} target="_blank" rel="noopener noreferrer">
             <Eye size={13} /> View
           </a>
-          <a className={pill} href={site.resume} download="Mohammed-Paseem-J-Resume.pdf">
+          <a className={pill} href={site.resume} download="Mohammed-Paseem-Resume.pdf">
             <Download size={13} /> Download
           </a>
         </Row>
@@ -188,18 +188,18 @@ function TalkView({ onForm, notify }: { onForm: () => void; notify: (m: string) 
         </Row>
         <div className="grid gap-4 py-4 text-sm sm:grid-cols-3">
           <p className="flex items-center gap-2 text-muted">
-            <MapPin size={14} className="text-lime" /> {site.location}, {site.country}
+            <MapPin size={14} className="text-accent" /> {site.location}, {site.country}
           </p>
           <p className="flex items-center gap-2 text-muted">
-            <Languages size={14} className="text-lime" /> {site.languages.join(" · ")}
+            <Languages size={14} className="text-accent" /> {site.languages.join(" · ")}
           </p>
           <p className="flex items-center gap-2 font-mono text-xs text-muted">
-            <Globe2 size={14} className="text-lime" /> <IstClock />
+            <Globe2 size={14} className="text-accent" /> <IstClock />
           </p>
         </div>
       </div>
 
-      <button type="button" onClick={onForm} className="btn-lime mt-2 w-full rounded-full px-6 py-3.5 text-sm font-semibold">
+      <button type="button" onClick={onForm} className="btn-accent mt-2 w-full rounded-full px-6 py-3.5 text-sm font-semibold">
         Send a message →
       </button>
     </div>
@@ -245,13 +245,13 @@ function FormView({ onBack, onSent, notify }: { onBack: () => void; onSent: () =
   };
 
   const field =
-    "w-full rounded-2xl border border-line bg-bg/60 px-4 py-3 text-sm text-ink placeholder:text-muted/70 outline-none transition-colors focus:border-lime";
+    "w-full rounded-2xl border border-line bg-bg/60 px-4 py-3 text-sm text-ink placeholder:text-muted/70 outline-none transition-colors focus:border-accent";
 
   return (
     <form onSubmit={submit} className="p-6 sm:p-8" noValidate={false}>
-      <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-lime">● Reply within a day</p>
+      <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-accent">● Reply within a day</p>
       <h2 className="mt-2 font-display text-4xl sm:text-5xl">
-        Send a message<span className="text-lime">.</span>
+        Send a message<span className="text-accent">.</span>
       </h2>
 
       <div className="mt-6 grid gap-4">
@@ -275,7 +275,7 @@ function FormView({ onBack, onSent, notify }: { onBack: () => void; onSent: () =
                   aria-pressed={on}
                   onClick={() => toggle(t)}
                   className={`rounded-full border px-4 py-2 text-xs font-medium transition-colors ${
-                    on ? "border-lime bg-lime text-bg" : "border-line text-ink hover:border-lime hover:text-lime"
+                    on ? "border-accent bg-accent text-bg" : "border-line text-ink hover:border-accent hover:text-accent"
                   }`}
                 >
                   {t}
@@ -308,14 +308,14 @@ function FormView({ onBack, onSent, notify }: { onBack: () => void; onSent: () =
         <button
           type="button"
           onClick={onBack}
-          className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-3 text-sm transition-colors hover:border-lime hover:text-lime"
+          className="inline-flex items-center gap-2 rounded-full border border-line px-5 py-3 text-sm transition-colors hover:border-accent hover:text-accent"
         >
           <ArrowLeft size={15} /> Back
         </button>
         <button
           type="submit"
           disabled={sending}
-          className="btn-lime inline-flex flex-1 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold disabled:opacity-60"
+          className="btn-accent inline-flex flex-1 items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold disabled:opacity-60"
         >
           {sending ? "Sending…" : "Send"} <Send size={15} />
         </button>

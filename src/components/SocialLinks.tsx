@@ -1,4 +1,4 @@
-import { site } from "@/data/site";
+import { instagramUrl, site } from "@/data/site";
 
 /** Row of round buttons with the ORIGINAL social logos. Entries without an href are skipped. */
 export default function SocialLinks({ size = "md", className = "" }: { size?: "sm" | "md" | "lg"; className?: string }) {
@@ -7,6 +7,7 @@ export default function SocialLinks({ size = "md", className = "" }: { size?: "s
   return (
     <ul className={`flex flex-wrap items-center gap-2.5 ${className}`} aria-label="Social links">
       {site.socials
+        .map((s) => (s.name === "Instagram" && !s.href ? { ...s, href: instagramUrl } : s))
         .filter((s) => s.href)
         .map((s) => {
           const external = s.href.startsWith("http");

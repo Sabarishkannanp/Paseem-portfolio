@@ -64,7 +64,7 @@ export default function Navbar() {
             data-build-tool="text"
             className="font-display text-base tracking-tight text-ink md:text-lg"
           >
-            Paseem&apos;s Portfolio<span className="text-lime">.</span>
+            Paseem&apos;s Portfolio<span className="text-accent">.</span>
           </a>
 
           <ul className="hidden items-center gap-1 rounded-full border border-line/80 bg-surface/50 px-2 py-1.5 backdrop-blur md:flex">
@@ -81,7 +81,7 @@ export default function Navbar() {
                     {n.label}
                     <span
                       aria-hidden
-                      className={`absolute inset-x-3 -bottom-0.5 h-[2px] rounded-full bg-lime transition-transform duration-300 ${
+                      className={`absolute inset-x-3 -bottom-0.5 h-[2px] rounded-full bg-accent transition-transform duration-300 ${
                         on ? "scale-x-100" : "scale-x-0"
                       }`}
                     />
@@ -97,7 +97,7 @@ export default function Navbar() {
               data-build="9"
               data-build-tool="shape"
               onClick={() => openContact()}
-              className="btn-lime hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold sm:inline-flex"
+              className="btn-accent hidden items-center gap-2 rounded-full px-5 py-2.5 text-sm font-semibold sm:inline-flex"
             >
               <span className="animate-pulse-dot text-[10px]">●</span> Let&apos;s talk
             </button>
@@ -128,7 +128,7 @@ export default function Navbar() {
           >
             <div className="flex items-center justify-between">
               <span className="font-display text-base">
-                Paseem&apos;s Portfolio<span className="text-lime">.</span>
+                Paseem&apos;s Portfolio<span className="text-accent">.</span>
               </span>
               <button
                 type="button"
@@ -149,7 +149,7 @@ export default function Navbar() {
                 >
                   <a href={n.href} onClick={() => setMenu(false)} className="font-display text-5xl leading-tight text-ink">
                     {n.label}
-                    <span className="text-lime">.</span>
+                    <span className="text-accent">.</span>
                   </a>
                 </motion.li>
               ))}
@@ -160,7 +160,7 @@ export default function Navbar() {
                 setMenu(false);
                 openContact();
               }}
-              className="btn-lime mt-auto rounded-full px-6 py-4 font-semibold"
+              className="btn-accent mt-auto rounded-full px-6 py-4 font-semibold"
             >
               ● Let&apos;s talk
             </button>

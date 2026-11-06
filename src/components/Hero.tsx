@@ -25,7 +25,7 @@ export default function Hero() {
         data-build-tool="text"
         className="pointer-events-none relative z-0 select-none text-center lg:absolute lg:inset-x-0 lg:top-[10.5vh]"
       >
-        <span className="font-display text-outline-lime block text-[clamp(5rem,23vw,25rem)] leading-[0.8] tracking-[0.06em] lg:text-[min(19vw,32vh)]">
+        <span className="font-display text-outline-accent block text-[clamp(5rem,23vw,25rem)] leading-[0.8] tracking-[0.06em] lg:text-[min(19vw,32vh)]">
           {top}
         </span>
         <span className="font-display text-grad-hero block text-[clamp(4.4rem,20.5vw,22.5rem)] leading-[0.82] tracking-[0.01em] lg:text-[min(17vw,29vh)]">
@@ -43,7 +43,7 @@ export default function Hero() {
       <div
         data-build="4"
         data-build-tool="image"
-        className="relative z-10 mx-auto -mt-[30vw] aspect-[706/970] w-[min(78vw,400px)] lg:absolute lg:bottom-0 lg:left-1/2 lg:mt-0 lg:w-[min(37vw,580px,60vh)] lg:-translate-x-1/2"
+        className="relative z-10 mx-auto -mt-[30vw] aspect-[436/848] w-[min(58vw,290px)] lg:absolute lg:bottom-0 lg:left-1/2 lg:mt-0 lg:w-[min(26vw,420px,44vh)] lg:-translate-x-1/2"
       >
         <div aria-hidden className="absolute inset-x-[-30%] top-[0%] -z-10 aspect-square rounded-full blur-2xl" style={{ background: "var(--grad-glow)" }} />
         <div className="hero-rim absolute inset-0">
@@ -52,38 +52,45 @@ export default function Hero() {
             alt={`${site.name}, ${site.role} based in ${site.city}`}
             fill
             preload
-            sizes="(min-width:1024px) 37vw, 78vw"
+            sizes="(min-width:1024px) 26vw, 58vw"
             className="hero-photo object-contain object-bottom"
           />
         </div>
 
         {/* glass analytics cards, placed like the poster */}
-        <GlassChart variant="line" label={c1} className="left-[-6%] top-[30%] w-[31%] lg:left-[-26%] lg:top-[22%] lg:w-[30%]" />
-        <GlassChart variant="combo" label={c2} className="right-[-6%] top-[12%] w-[33%] lg:right-[-26%] lg:w-[32%]" delay={-1.6} />
-        <GlassChart variant="bars" label={c3} className="bottom-[18%] right-[-6%] w-[30%] lg:right-[-24%]" delay={-3.1} />
+        <GlassChart variant="line" label={c1} className="left-[-38%] top-[30%] w-[48%] lg:left-[-62%] lg:top-[24%] lg:w-[56%]" />
+        <GlassChart variant="combo" label={c2} className="right-[-40%] top-[10%] w-[50%] lg:right-[-62%] lg:w-[58%]" delay={-1.6} />
+        <GlassChart variant="bars" label={c3} className="bottom-[20%] right-[-36%] w-[46%] lg:right-[-58%] lg:w-[54%]" delay={-3.1} />
       </div>
 
       {/* name block */}
       <div className="relative z-20 -mt-16 px-5 md:px-8 lg:absolute lg:bottom-[7vh] lg:left-8 lg:mt-0 lg:max-w-[min(36vw,560px)] lg:p-0 xl:left-12">
-        <p data-build="2" data-build-tool="text" className="font-script text-3xl text-lime md:text-4xl">
+        <p data-build="2" data-build-tool="text" className="font-script text-3xl text-accent md:text-4xl">
           Hi, I&apos;m {site.shortName}
         </p>
-        <h1 data-build="3" data-build-tool="text" className="font-display mt-1 whitespace-nowrap text-[clamp(1.9rem,9.2vw,3.4rem)] leading-[0.95] tracking-[0.01em] text-ink lg:text-[clamp(2.6rem,4.4vw,4.6rem)]">
-          Mohammed Paseem <span className="text-lime">J.</span>
+        <h1 data-build="3" data-build-tool="text" className="font-display mt-1 whitespace-nowrap text-[clamp(1.9rem,9.2vw,3.4rem)] leading-[0.95] tracking-[0.01em] text-ink lg:text-[clamp(2.4rem,3.9vw,4.2rem)]">
+          Mohammed <span className="text-accent">Paseem.</span>
         </h1>
         <div data-build="6" data-build-tool="text" className="mt-3">
-          <p className="font-mono text-xs font-semibold tracking-[0.18em] text-ink md:text-sm">DIGITAL MARKETING SPECIALIST · SEO · ADS</p>
+          <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.14em] text-ink md:text-sm">
+            {site.roleLine.map((r, i) => (
+              <span key={r}>
+                {i > 0 && <span className="px-1.5 text-accent">|</span>}
+                {r}
+              </span>
+            ))}
+          </p>
           <span aria-hidden className="mt-2 block h-[3px] w-12 rounded-full line-grad" />
           <p className="mt-3 max-w-md text-[15px] leading-relaxed text-muted">{site.tagline}</p>
         </div>
         <div data-build="7" data-build-tool="shape" className="mt-6 flex flex-wrap items-center gap-3">
-          <a href="#results" className="btn-lime inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
+          <a href="#results" className="btn-accent inline-flex items-center gap-2 rounded-full px-6 py-3 text-sm font-semibold">
             See results <ArrowDownRight size={16} />
           </a>
           <a
             href={site.resume}
-            download="Mohammed-Paseem-J-Resume.pdf"
-            className="inline-flex items-center gap-2 rounded-full border border-line bg-bg/40 px-6 py-3 text-sm font-medium text-ink backdrop-blur transition-colors hover:border-lime hover:text-lime"
+            download="Mohammed-Paseem-Resume.pdf"
+            className="inline-flex items-center gap-2 rounded-full border border-line bg-bg/40 px-6 py-3 text-sm font-medium text-ink backdrop-blur transition-colors hover:border-accent hover:text-accent"
           >
             <Download size={16} /> Download resume
           </a>

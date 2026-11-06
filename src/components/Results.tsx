@@ -14,7 +14,7 @@ export default function Results() {
       aria-labelledby="results-title"
       className="mx-auto max-w-[1440px] px-5 py-24 md:px-8 md:py-32"
     >
-      <SectionHeading id="results-title" eyebrow="Selected case studies" lines={["Results", "that rank"]} />
+      <SectionHeading id="results-title" eyebrow="Selected case studies" lines={["Where strategy", "meets results"]} />
 
       <ul className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         {cases.map((c, i) => {
@@ -34,7 +34,7 @@ export default function Results() {
                   ) : (
                     <ImagePlaceholder label={c.industry} path={c.image} />
                   )}
-                  <span className="absolute left-4 top-4 rounded-full border border-white/10 bg-bg/70 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-lime backdrop-blur">
+                  <span className="absolute left-4 top-4 rounded-full border border-white/10 bg-bg/70 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-accent backdrop-blur">
                     {c.industry}
                   </span>
                   <span className="absolute right-4 top-4 font-mono text-[10px] text-muted">0{i + 1}</span>
@@ -45,7 +45,7 @@ export default function Results() {
                   <dl className="mt-5 grid grid-cols-3 gap-2 border-y border-line py-4">
                     {c.results.map((r) => (
                       <div key={r.label}>
-                        <dd className="font-mono text-lg font-semibold text-lime">{r.value}</dd>
+                        <dd className="font-mono text-lg font-semibold text-accent">{r.value}</dd>
                         <dt className="mt-0.5 text-[11px] leading-tight text-muted">{r.label}</dt>
                       </div>
                     ))}
@@ -75,12 +75,12 @@ export default function Results() {
             >
               <span className="flex items-baseline gap-5">
                 <span className="font-mono text-xs text-muted">{String(i + 1).padStart(2, "0")}</span>
-                <span className="font-display text-2xl text-ink transition-colors group-hover:text-lime md:text-4xl">{ind}</span>
+                <span className="font-display text-2xl text-ink transition-colors group-hover:text-accent md:text-4xl">{ind}</span>
               </span>
               <ArrowUpRight
                 size={22}
                 aria-hidden
-                className="text-muted transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-lime"
+                className="text-muted transition-transform duration-300 group-hover:-translate-y-1 group-hover:translate-x-1 group-hover:text-accent"
               />
             </li>
           ))}

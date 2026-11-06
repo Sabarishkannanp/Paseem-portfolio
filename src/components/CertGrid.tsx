@@ -19,7 +19,7 @@ export default function CertGrid({ items }: { items: Item[] }) {
           <li key={c.slug} data-build={i + 2} >
             <article className="card-grad group flex h-full flex-col rounded-3xl bg-surface p-6">
               <div className="flex items-start justify-between gap-3">
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-lime/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-lime">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-accent/10 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.15em] text-accent">
                   <Award size={12} /> {c.issuer}
                 </span>
                 <span className="font-mono text-[11px] text-muted">{c.year}</span>
@@ -29,7 +29,7 @@ export default function CertGrid({ items }: { items: Item[] }) {
               <button
                 type="button"
                 onClick={() => setView(c)}
-                className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-line px-4 py-2 text-xs font-medium text-ink transition-colors hover:border-lime hover:text-lime"
+                className="mt-6 inline-flex w-fit items-center gap-2 rounded-full border border-line px-4 py-2 text-xs font-medium text-ink transition-colors hover:border-accent hover:text-accent"
               >
                 <Eye size={14} /> View certificate
               </button>

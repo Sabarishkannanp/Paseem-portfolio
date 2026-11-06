@@ -29,6 +29,20 @@ export const cases: CaseStudy[] = [
     featured: true,
   },
   {
+    slug: "education-google-ads",
+    title: "Google Ads Lead Generation",
+    industry: "Education",
+    challenge: "Admissions season needed more calls and enquiries without wasting budget.",
+    results: [
+      { label: "Calls & enquiries", value: "↑" }, // ✏️ edit
+      { label: "CTR", value: "↑" }, // ✏️ edit
+      { label: "Conversion tracking", value: "GTM" }, // ✏️ edit
+    ],
+    tools: ["Google Ads", "Tag Manager", "GA4"],
+    image: "/cases/education-google-ads.jpg",
+    featured: true,
+  },
+  {
     slug: "hospitality-seo",
     title: "SEO & Content Strategy",
     industry: "Hospitality",
@@ -68,20 +82,6 @@ export const cases: CaseStudy[] = [
     ],
     tools: ["Meta Ads", "Canva", "CapCut"],
     image: "/cases/jewellery-meta-ads.jpg",
-    featured: false,
-  },
-  {
-    slug: "education-google-ads",
-    title: "Google Ads Search Campaigns",
-    industry: "Education",
-    challenge: "Admissions season needed more calls and enquiries without wasting budget.",
-    results: [
-      { label: "Calls & enquiries", value: "↑" }, // ✏️ edit
-      { label: "CTR", value: "↑" }, // ✏️ edit
-      { label: "Conversion tracking", value: "GTM" }, // ✏️ edit
-    ],
-    tools: ["Google Ads", "Tag Manager", "GA4"],
-    image: "/cases/education-google-ads.jpg",
     featured: false,
   },
   {

@@ -73,7 +73,7 @@ export default function Skills() {
                   onClick={() => setOpen(isOpen ? null : i)}
                   className="flex w-full items-center gap-5 py-5 text-left md:gap-10 md:py-7"
                 >
-                  <span className="w-8 shrink-0 font-mono text-xs tabular-nums text-lime transition-colors duration-300 group-data-[open]:text-ink">
+                  <span className="w-8 shrink-0 font-mono text-xs tabular-nums text-accent transition-colors duration-300 group-data-[open]:text-ink">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <span className="font-display text-outline flex-1 text-[clamp(2.6rem,9vw,8rem)] leading-[0.95] transition-[color,-webkit-text-stroke-color,transform] duration-500 group-data-[open]:translate-x-2 group-data-[open]:text-ink group-data-[open]:[-webkit-text-stroke-color:transparent]">
@@ -101,7 +101,7 @@ export default function Skills() {
                             {brandFor(t) ? (
                               <BrandLogo name={t} size={16} />
                             ) : (
-                              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-lime shadow-[0_0_6px_#C6FF3D]" />
+                              <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent shadow-[0_0_6px_#C6FF3D]" />
                             )}
                             {t}
                           </li>
@@ -121,7 +121,7 @@ export default function Skills() {
           {hovering && open !== null && (
             <motion.span
               aria-hidden
-              className="pointer-events-none absolute left-0 top-0 z-10 -ml-10 -mt-10 hidden h-20 w-20 place-items-center rounded-full bg-lime/90 shadow-[0_0_40px_rgba(198,255,61,.45)] md:grid"
+              className="pointer-events-none absolute left-0 top-0 z-10 -ml-10 -mt-10 hidden h-20 w-20 place-items-center rounded-full bg-accent/90 shadow-[0_0_40px_rgba(198,255,61,.45)] md:grid"
               style={{ x, y }}
               initial={{ scale: 0, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}

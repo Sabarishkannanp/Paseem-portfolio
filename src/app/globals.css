@@ -2,14 +2,14 @@
 @import "lenis/dist/lenis.css";
 
 @theme inline {
-  --color-bg: #07090f;
-  --color-surface: #0e121b;
-  --color-line: #1c2230;
-  --color-lime: #c6ff3d;
-  --color-blue: #4d7cff;
-  --color-aqua: #2ee6c5;
+  --color-bg: #07090F;
+  --color-surface: #0E121B;
+  --color-line: #1C2230;
+  --color-accent: #C6FF3D;
+  --color-accent-deep: #4D7CFF;
+  --color-accent-warm: #2EE6C5;
   --color-ink: #eef1f6;
-  --color-muted: #8b93a6;
+  --color-muted: #8B93A6;
 
   --font-sans: var(--font-inter), system-ui, sans-serif;
   --font-mono: var(--font-jetbrains), ui-monospace, monospace;
@@ -18,18 +18,18 @@
 }
 
 :root {
-  --bg: #07090f;
-  --lime: #c6ff3d;
-  --glow-lime: 0 0 60px rgba(198, 255, 61, 0.25);
+  --bg: #07090F;
+  --accent: #C6FF3D;
+  --glow-accent: 0 0 60px rgba(198,255,61, 0.25);
 
-  --grad-hero: linear-gradient(180deg, #f1ffb8 0%, #c6ff3d 45%, #6fcf0a 100%);
-  --grad-btn: linear-gradient(135deg, #d9ff5c, #9be01e);
-  --grad-btn-hover: linear-gradient(135deg, #e8ff8a, #b4f02a);
-  --grad-glow: radial-gradient(circle, rgba(198, 255, 61, 0.45) 0%, rgba(77, 124, 255, 0.15) 38%, transparent 68%);
-  --grad-line: linear-gradient(90deg, #c6ff3d, #2ee6c5);
-  --grad-row: linear-gradient(90deg, rgba(198, 255, 61, 0.45) 0%, rgba(198, 255, 61, 0.08) 55%, #07090f 100%);
+  --grad-hero: linear-gradient(180deg, #F1FFB8 0%, #C6FF3D 45%, #6FCF0A 100%);
+  --grad-btn: linear-gradient(135deg, #D9FF5C, #9BE01E);
+  --grad-btn-hover: linear-gradient(135deg, #E8FF8A, #B4F02A);
+  --grad-glow: radial-gradient(circle, rgba(198,255,61, 0.45) 0%, rgba(77,124,255, 0.15) 38%, transparent 68%);
+  --grad-line: linear-gradient(90deg, #C6FF3D, #2EE6C5);
+  --grad-row: linear-gradient(90deg, rgba(198,255,61, 0.45) 0%, rgba(198,255,61, 0.08) 55%, #07090F 100%);
   --grad-row-dark: linear-gradient(90deg, #7fae14 0%, #3b5409 32%, #141d07 65%, #07090f 100%);
-  --grad-band: linear-gradient(90deg, #c6ff3d 0%, #7bea2e 50%, #2ee6c5 100%);
+  --grad-band: linear-gradient(90deg, #C6FF3D 0%, #7BEA2E 50%, #2EE6C5 100%);
 }
 
 html {
@@ -46,12 +46,12 @@ body {
 }
 
 ::selection {
-  background: #c6ff3d;
-  color: #07090f;
+  background: #C6FF3D;
+  color: #07090F;
 }
 
 :focus-visible {
-  outline: 2px solid #c6ff3d;
+  outline: 2px solid #C6FF3D;
   outline-offset: 3px;
   border-radius: 4px;
 }
@@ -80,37 +80,37 @@ body {
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  filter: drop-shadow(0 0 28px rgba(198, 255, 61, 0.35));
+  filter: drop-shadow(0 0 28px rgba(198,255,61, 0.35));
 }
 
-@utility text-outline-lime {
+@utility text-outline-accent {
   color: transparent;
-  -webkit-text-stroke: 2px #c6ff3d;
-  filter: drop-shadow(0 0 14px rgba(198, 255, 61, 0.45));
+  -webkit-text-stroke: 2px #C6FF3D;
+  filter: drop-shadow(0 0 14px rgba(198,255,61, 0.45));
 }
 
 @utility text-outline {
   color: transparent;
-  -webkit-text-stroke: 1.5px rgba(238, 241, 246, 0.45);
+  -webkit-text-stroke: 1.5px rgba(238,241,246, 0.45);
 }
 
 @utility bg-grid {
   background-image:
-    linear-gradient(rgba(238, 241, 246, 0.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(238, 241, 246, 0.035) 1px, transparent 1px);
+    linear-gradient(rgba(238,241,246, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(238,241,246, 0.035) 1px, transparent 1px);
   background-size: 64px 64px;
 }
 
-@utility btn-lime {
+@utility btn-accent {
   background: var(--grad-btn);
-  color: #07090f;
-  box-shadow: 0 0 0 rgba(198, 255, 61, 0);
+  color: #07090F;
+  box-shadow: 0 0 0 rgba(198,255,61, 0);
   transition:
     box-shadow 0.3s,
     transform 0.3s;
   &:hover {
     background: var(--grad-btn-hover);
-    box-shadow: var(--glow-lime);
+    box-shadow: var(--glow-accent);
   }
 }
 
@@ -121,7 +121,7 @@ body {
 /* 1px gradient border on hover (lime → blue) */
 @utility card-grad {
   position: relative;
-  border: 1px solid #1c2230;
+  border: 1px solid #1C2230;
   transition: border-color 0.3s;
   &::before {
     content: "";
@@ -129,7 +129,7 @@ body {
     inset: -1px;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, #c6ff3d, #4d7cff);
+    background: linear-gradient(135deg, #C6FF3D, #4D7CFF);
     -webkit-mask:
       linear-gradient(#000 0 0) content-box,
       linear-gradient(#000 0 0);
@@ -156,7 +156,7 @@ body {
 }
 /* rim glow lives on a wrapper so the mask above can't clip it into a box */
 @utility hero-rim {
-  filter: drop-shadow(-10px 0 28px rgba(198, 255, 61, 0.22)) drop-shadow(12px 0 30px rgba(77, 124, 255, 0.22));
+  filter: drop-shadow(-10px 0 28px rgba(198,255,61, 0.22)) drop-shadow(12px 0 30px rgba(77,124,255, 0.22));
 }
 
 /* ---------- keyframes ---------- */
@@ -183,6 +183,18 @@ body {
 .animate-marquee {
   animation: marquee 32s linear infinite;
 }
+/* client logo rows: each copy slides its own width, so the loop is seamless */
+@keyframes scroll-x {
+  to {
+    transform: translateX(-100%);
+  }
+}
+.animate-scroll-x {
+  animation: scroll-x 38s linear infinite;
+}
+.animate-scroll-x-rev {
+  animation: scroll-x 38s linear infinite reverse;
+}
 .animate-float {
   animation: float 5s ease-in-out infinite;
 }
@@ -192,6 +204,8 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
   .animate-marquee,
+  .animate-scroll-x,
+  .animate-scroll-x-rev,
   .animate-float,
   .animate-pulse-dot {
     animation: none;

@@ -32,7 +32,7 @@ export default function Footer() {
       <div className="mx-auto flex max-w-[1440px] flex-col gap-10 px-5 pb-10 pt-16 md:px-8">
         <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">
           <div>
-            <p data-build="2" data-build-tool="text" className="font-script text-6xl leading-none text-lime md:text-8xl">
+            <p data-build="2" data-build-tool="text" className="font-script text-6xl leading-none text-accent md:text-8xl">
               {site.name}
             </p>
             <div data-build="3" data-build-tool="shape" className="mt-6">
@@ -43,13 +43,13 @@ export default function Footer() {
             <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-muted">
               {site.nav.map((n) => (
                 <li key={n.href}>
-                  <a href={n.href} className="transition-colors hover:text-lime">
+                  <a href={n.href} className="transition-colors hover:text-accent">
                     {n.label}
                   </a>
                 </li>
               ))}
               <li>
-                <a href={site.resume} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-lime">
+                <a href={site.resume} target="_blank" rel="noopener noreferrer" className="transition-colors hover:text-accent">
                   Resume ↗
                 </a>
               </li>
